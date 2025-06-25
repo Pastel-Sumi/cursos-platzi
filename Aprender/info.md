@@ -38,3 +38,21 @@ Crea tu método de estudio:
 5. Sistema de retención: Recordar lo que se aprendió.
 
 ***"Aprender con un método te asegura resultados predecibles. Esto es mil veces más valioso que repetir información y olvidarlo todo".***
+
+## Notas 24/06/2026
+
+### Sistema de organización
+* Lista de actividades
+* Agenda Diaria
+* Calendario
+
+Agenda diaria:
+- Prioridades:
+  * Alta 
+  * Media
+  * Baja
+* Calendario de eventos:
+  * Fijos
+  * Variables
+
+***"Organiza tu vida y tu aprendizaje para que tu mente esté más enfocada".***
