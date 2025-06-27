@@ -72,8 +72,8 @@ La etiqueta **source**, se puede colocar dentro de una etiqueta **video** varias
 Los formularios son esenciales en los productos web porque son la principal forma en que interactuamos con los usuarios. Nos permiten solicitar o recibir información de los visitantes, ya sea para registrar cuentas de usuario, completar transacciones de compras o recolectar retroalimentación. Sin embargo, a menudo pueden ser una barrera si no están bien diseñados. Formularios que son confusos o demasiado largos pueden alejar a los usuarios potenciales.
 ¿Cómo se estructura un formulario HTML correctamente?
 
-Al estructurar un formulario en HTML, es imprescindible usar la etiqueta *<form>* y añadirle atributos como method y action. Estas etiquetas y atributos direccionan las interacciones del formulario, comunicándole al navegador que los datos introducidos se gestionarán adecuadamente. A continuación, presentamos un ejemplo básico de cómo iniciar esta estructura:
-'''
+Al estructurar un formulario en HTML, es imprescindible usar la etiqueta `<form>` y añadirle atributos como method y action. Estas etiquetas y atributos direccionan las interacciones del formulario, comunicándole al navegador que los datos introducidos se gestionarán adecuadamente. A continuación, presentamos un ejemplo básico de cómo iniciar esta estructura:
+```html
     <form action="/submit-data" method="post">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name">
@@ -83,38 +83,38 @@ Al estructurar un formulario en HTML, es imprescindible usar la etiqueta *<form>
     
     <button type="submit">Enviar</button>
     </form>
-'''
+```
 ¿Cómo mejorar la experiencia del usuario?
 
 Para enriquecer la experiencia del usuario en los formularios, puedes seguir estas recomendaciones:
 
-    Simplicidad: Reduce los campos a los necesarios.
-    Guías visuales: Utiliza etiquetas y placeholders que orienten al usuario sobre qué información necesita proporcionar.
-    Proporciona retroalimentación: Después de enviar, confirma el éxito o indica errores de manera clara.
+* Simplicidad: Reduce los campos a los necesarios.
+* Guías visuales: Utiliza etiquetas y placeholders que orienten al usuario sobre qué información necesita proporcionar.
+* Proporciona retroalimentación: Después de enviar, confirma el éxito o indica errores de manera clara.
 
 ¿Qué tipos de inputs existen?
 
 HTML ofrece una amplia variedad de tipos de inputs que permiten recibir diferentes formatos de datos. Entre los más comunes están:
-
-    Text: Para texto regular, como nombres o direcciones.
-    Email: Que incluye validación básica para formatos de correo electrónico.
-    Date: Permite al usuario seleccionar una fecha desde un calendario desplegable.
-    Time: Brinda una interfaz para que el usuario seleccione una hora específica del día.
-    Number: Permite inputs numéricos, lo que limita el tipo de información que puede ser ingresada.
+* Text: Para texto regular, como nombres o direcciones.
+* Email: Que incluye validación básica para formatos de correo electrónico.
+* Date: Permite al usuario seleccionar una fecha desde un calendario desplegable.
+* Time: Brinda una interfaz para que el usuario seleccione una hora específica del día.
+* Number: Permite inputs numéricos, lo que limita el tipo de información que puede ser ingresada.
 
 Aquí un ejemplo de cómo se configuran estos inputs:
 
+```html
 <label for="startdate">Fecha de inicio:</label>
 <input type="date" id="startdate" name="startdate">
 
 <label for="timestudy">Hora de estudio:</label>
 <input type="time" id="timestudy" name="timestudy">
-
+```
 ¿Qué es un Placeholder y por qué es útil?
 
 El atributo placeholder en los inputs HTML es crucial para mejorar la claridad en los formularios. Al proporcionar un texto sugerido dentro del campo de entrada, orienta al usuario sobre el formato o el tipo de información esperada. Por ejemplo:
 
-<input type="text" id="name" name="name" placeholder="Introduce tu nombre completo">
+`<input type="text" id="name" name="name" placeholder="Introduce tu nombre completo">`
 
 El uso efectivo de placeholders mejora considerablemente la experiencia del usuario al hacer más intuitivo el proceso de llenado del formulario, además de disminuir posibles errores en la introducción de datos.
 
