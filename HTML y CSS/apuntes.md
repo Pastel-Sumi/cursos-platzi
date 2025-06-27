@@ -66,3 +66,56 @@ La etiqueta **video**, tiene algunos atributos como: .
 * **preload = auto**: hace que el navegador descargue el video, en el momento en el que se acceda a la página.
 
 La etiqueta **source**, se puede colocar dentro de una etiqueta **video** varias veces, para especificar diferentes rutas y formatos del mismo video. Esto para asegurar que cualquier navegador pueda mostrar el video.
+
+## ¿Por qué los formularios son tan importantes?
+
+Los formularios son esenciales en los productos web porque son la principal forma en que interactuamos con los usuarios. Nos permiten solicitar o recibir información de los visitantes, ya sea para registrar cuentas de usuario, completar transacciones de compras o recolectar retroalimentación. Sin embargo, a menudo pueden ser una barrera si no están bien diseñados. Formularios que son confusos o demasiado largos pueden alejar a los usuarios potenciales.
+¿Cómo se estructura un formulario HTML correctamente?
+
+Al estructurar un formulario en HTML, es imprescindible usar la etiqueta *<form>* y añadirle atributos como method y action. Estas etiquetas y atributos direccionan las interacciones del formulario, comunicándole al navegador que los datos introducidos se gestionarán adecuadamente. A continuación, presentamos un ejemplo básico de cómo iniciar esta estructura:
+'''
+    <form action="/submit-data" method="post">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name">
+    
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email">
+    
+    <button type="submit">Enviar</button>
+    </form>
+'''
+¿Cómo mejorar la experiencia del usuario?
+
+Para enriquecer la experiencia del usuario en los formularios, puedes seguir estas recomendaciones:
+
+    Simplicidad: Reduce los campos a los necesarios.
+    Guías visuales: Utiliza etiquetas y placeholders que orienten al usuario sobre qué información necesita proporcionar.
+    Proporciona retroalimentación: Después de enviar, confirma el éxito o indica errores de manera clara.
+
+¿Qué tipos de inputs existen?
+
+HTML ofrece una amplia variedad de tipos de inputs que permiten recibir diferentes formatos de datos. Entre los más comunes están:
+
+    Text: Para texto regular, como nombres o direcciones.
+    Email: Que incluye validación básica para formatos de correo electrónico.
+    Date: Permite al usuario seleccionar una fecha desde un calendario desplegable.
+    Time: Brinda una interfaz para que el usuario seleccione una hora específica del día.
+    Number: Permite inputs numéricos, lo que limita el tipo de información que puede ser ingresada.
+
+Aquí un ejemplo de cómo se configuran estos inputs:
+
+<label for="startdate">Fecha de inicio:</label>
+<input type="date" id="startdate" name="startdate">
+
+<label for="timestudy">Hora de estudio:</label>
+<input type="time" id="timestudy" name="timestudy">
+
+¿Qué es un Placeholder y por qué es útil?
+
+El atributo placeholder en los inputs HTML es crucial para mejorar la claridad en los formularios. Al proporcionar un texto sugerido dentro del campo de entrada, orienta al usuario sobre el formato o el tipo de información esperada. Por ejemplo:
+
+<input type="text" id="name" name="name" placeholder="Introduce tu nombre completo">
+
+El uso efectivo de placeholders mejora considerablemente la experiencia del usuario al hacer más intuitivo el proceso de llenado del formulario, además de disminuir posibles errores en la introducción de datos.
+
+Los formularios bien diseñados no solo favorecen una mejor experiencia del usuario, sino que también mejoran la interacción y conversión en cualquier plataforma digital. Mantén siempre en mente que un formulario efectivo es fácil de entender y rápido de completar.
