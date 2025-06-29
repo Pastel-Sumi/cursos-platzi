@@ -119,3 +119,11 @@ El atributo placeholder en los inputs HTML es crucial para mejorar la claridad e
 El uso efectivo de placeholders mejora considerablemente la experiencia del usuario al hacer más intuitivo el proceso de llenado del formulario, además de disminuir posibles errores en la introducción de datos.
 
 Los formularios bien diseñados no solo favorecen una mejor experiencia del usuario, sino que también mejoran la interacción y conversión en cualquier plataforma digital. Mantén siempre en mente que un formulario efectivo es fácil de entender y rápido de completar.
+
+## CSS: Cascading Style Sheets
+CSS, o Cascading Style Sheets, es una tecnología crucial para definir la presentación visual de un sitio web. Este estándar se encarga de la apariencia de los elementos HTML, permitiendo a los desarrolladores aplicar estilos visuales sofisticados, desde colores y tipografía hasta el diseño y las dimensiones de los elementos. Queremos que nuestros proyectos no solo funcionen bien, sino que también se vean atractivos, y aquí es donde CSS entra en juego.
+
+### ¿Cuál es la importancia de CSS en el diseño web?
+* **Esteticismo Visual**: Cualquier proyecto web puede transformar texto aburrido y grandes imágenes en contenido visualmente apacible.
+* **Flexibilidad y Personalización**: Permite definir diferentes estilos y formatos, adaptándose a las necesidades específicas del proyecto.
+* **Compatibilidad Multidispositivo**: CSS ofrece métodos para que un sitio se vea bien en múltiples dispositivos y tamaños de pantalla.
