@@ -127,3 +127,60 @@ CSS, o Cascading Style Sheets, es una tecnología crucial para definir la presen
 * **Esteticismo Visual**: Cualquier proyecto web puede transformar texto aburrido y grandes imágenes en contenido visualmente apacible.
 * **Flexibilidad y Personalización**: Permite definir diferentes estilos y formatos, adaptándose a las necesidades específicas del proyecto.
 * **Compatibilidad Multidispositivo**: CSS ofrece métodos para que un sitio se vea bien en múltiples dispositivos y tamaños de pantalla.
+
+### ¿Cómo se configuran las pseudo clases en CSS?
+Las pseudo clases permiten aplicar estilos a un elemento HTML según su estado, sin necesidad de añadir clases adicionales en el HTML. Estas son llamadas mediante el uso de dos puntos seguidos del nombre de la pseudo clase. Aquí te presento algunos ejemplos importantes:
+* **hover**: Aplica un estilo cuando el usuario posa el cursor sobre un elemento.
+
+```css
+a:hover {
+    color: red;
+}
+```
+
+* **active**: Afecta a un elemento cuando está siendo activado (ej., presionado).
+```css
+a:active {
+    color: blue;
+}
+```
+[Más sobre psudoclases](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes)
+
+### ¿Qué son los pseudo elementos y cómo se utilizan?
+Los pseudo elementos se utilizan para designar y estilizar partes específicas de un elemento. Se introducen utilizando dobles dos puntos (::), y puedes ver un ejemplo básico de su utilidad a continuación:
+
+* **::before y ::after**: Permiten insertar contenido antes o después del contenido del elemento respectivo. Es especialmente útil para generar efectos decorativos:
+```css
+a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: cyan;
+}
+```
+En el ejemplo anterior, ::after se utiliza para agregar una línea decorativa debajo de un enlace sin modificar el documento HTML. [Más sobre pseudoelementos](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements)
+
+### ¿Qué metodología recomendada para nombrar clases en CSS?
+Como desarrollador, uno de los retos más comunes es mantener un sistema de nombres claro para las clases CSS. En esta clase, se menciona la metodología ***BEM (Block, Element, Modifier)*** como una herramienta efectiva. BEM proporciona un sistema estructurado para nombrar tus clases, asegurando que sean escalables y comprensibles.
+
+* **Bloques:** Componentes autónomos, como .main-nav.
+* **Elementos:** Partes de un bloque que sirven una función determinada, como .main-nav__item.
+* **Modificadores:** Variantes del bloque o elemento, como .main-nav--active.
+
+
+### ¿Cómo afecta el estilo predeterminado del navegador?
+Es fundamental entender que los navegadores aplican algunos estilos por defecto a los elementos HTML. Estos estilos pueden incluir márgenes, paddings y decoraciones como subrayados en enlaces. Es vital dominar cómo sobrescribir estos estilos para que todos los elementos se comporten según tus especificaciones de diseño.
+```css
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+```
+
+### ¿Qué es el box model y cómo influye el padding y margin?
+El box model de CSS es la base para entender cómo el espacio y el tamaño de los elementos se determinan en el navegador:
+
+* **Padding:** Espacio interno entre el contenido de un elemento y su borde. Al ajustar el padding, incrementas la distancia entre el contenido y los bordes.
+* **Margin:** Espacio externo que separa un elemento de otro en la página. Es útil para separar y alinear elementos.
