@@ -208,3 +208,52 @@ A menudo, cuando aplicas padding y border, estos pueden causar que la caja se de
 Al comenzar con CSS, es crucial reiniciar los estilos predeterminados del navegador, lo que incluye margin y padding, aplicando el selector universal `*`. Esto garantiza que no tengas comportamientos inesperados en las dimensiones de los elementos:
 * **Resetear Padding y Margin:** Usar `* { margin: 0; padding: 0; }`.
 * **Box-sizing Universal:** Agregar `box-sizing: border-box;` en el selector universal para un manejo más uniforme de las dimensiones.
+
+### ¿Qué es la herencia en CSS?
+La herencia en CSS se refiere al fenómeno por el cual algunos estilos establecidos en un elemento HTML se transmiten automáticamente a sus elementos hijos. Por ejemplo, al definir un tamaño de fuente en la etiqueta `<html>`, ese tamaño puede propagar a etiquetas como `<p>` o `<span>` que no tengan un tamaño de fuente definido explícitamente.
+
+* **Propiedades herederas comunes:** tamaño de fuente (font-size), color de texto (color).
+* **Propiedades no herederas:** márgenes (margin), posición (position), anchura (width).
+
+### ¿Cómo aplicar la herencia?
+Para entender cómo aplicar la herencia, vamos a explorar un ejemplo práctico a través de un archivo CSS que aplica estilos a una página HTML:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Herencia</title>
+</head>
+<body>
+    <main>
+        <h1>Soy un título</h1>
+        <p>Soy un párrafo</p>
+    </main>
+</body>
+</html>
+```
+```CSS
+html {
+    font-size: 75%; /* Aplica un 75% del tamaño de fuente por defecto */
+    font-family: Verdana, sans-serif; /* Cambia la fuente a Verdana */
+}
+```
+En el ejemplo anterior, se establece un tamaño de fuente del 75% para la etiqueta `<html>`. Esto significa que todos los elementos de texto dentro del documento heredarán este tamaño de fuente, a menos que se defina un tamaño específico en ellos.
+
+### ¿Cómo controlar o romper la herencia?
+En CSS, puedes decidir explícitamente cuándo deseas que un elemento herede propiedades. Mediante el uso de la propiedad ***inherit***, puedes forzar a un elemento a que tome el estilo de su elemento padre, aunque no lo haga por defecto.
+```css
+h1 {
+    font-size: inherit; /* Hereda el tamaño de fuente del padre más cercano con tamaño definido */
+}
+```
+En este código, el h1 tendrá el mismo tamaño de fuente que su padre, siempre y cuando el elemento padre tenga un tamaño de fuente explícito.
+
+### ¿Por qué es importante comprender la herencia?
+Entender la herencia permite evitar errores comunes y optimiza el código CSS. Algunas razones para dominar la herencia incluyen:
+
+* ***Consistencia en el diseño:*** Asegura que los estilos se apliquen uniformemente en toda la página.
+* ***Menor repetición de código:*** Reducir la necesidad de redefinir estilos para cada elemento.
+* ***Flexibilidad y control:*** Facilita el ajuste preciso del estilo donde sea necesario, rompiendo la herencia cuando ciertos elementos requieren un tratamiento diferente.
