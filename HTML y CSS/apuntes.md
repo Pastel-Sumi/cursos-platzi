@@ -184,3 +184,27 @@ El box model de CSS es la base para entender cómo el espacio y el tamaño de lo
 
 * **Padding:** Espacio interno entre el contenido de un elemento y su borde. Al ajustar el padding, incrementas la distancia entre el contenido y los bordes.
 * **Margin:** Espacio externo que separa un elemento de otro en la página. Es útil para separar y alinear elementos.
+![reglas CSS](etiquetasCSS.png)
+
+### ¿Qué es el modelo de caja en CSS?
+Cuando trabajas con CSS, es esencial comprender el concepto de "modelo de caja", ya que es la base para aplicar estilos visuales a los elementos HTML. Imagina que cada elemento renderizado se comporta como una caja, la cual está compuesta por cuatro áreas principales: _el contenido, el padding, el borde y el margin_.
+
+### ¿Cómo se definen los márgenes, bordes y padding?
+* **Margin:** Es el espacio externo de la caja hacia afuera. Funciona como una separación entre la caja y otros elementos. Aunque el margin es transparente y no visible, asegura que la caja tenga un respiro alrededor de otros elementos en la página.
+
+* **Borde:** Es la línea que rodea el contenido de la caja. El borde puede tener color y grosor, permitiendo destacarse si es necesario. Por defecto, es transparente, pero lo puedes personalizar.
+
+* **Padding:** Este es el espacio interno de la caja hacia adentro. Ayuda a posicionar el contenido dentro de la caja, brindando un margen interno entre el contenido y los bordes del elemento.
+
+### ¿Cómo se establece el tamaño y el posicionamiento?
+* **Width y Height:** Dictan el ancho y el alto de la caja, respectivamente. Puedes manipular estos valores para ajustar tanto el tamaño del contenedor como el del contenido dentro de él.
+
+* **Posicionamiento:** Utilizando propiedades como top, bottom, right y left, puedes mover la caja en cualquier dirección, según se requiera.
+
+### ¿Cómo prevenir problemas con el scroll?
+A menudo, cuando aplicas padding y border, estos pueden causar que la caja se desborde, generando barras de scroll no deseadas. Una solución eficaz es utilizar `box-sizing: border-box`, lo cual asegura que el tamaño total del elemento respete las dimensiones del padding y el borde. Así, al establecer un ancho del 100%, el navegador automáticamente reajusta el contenido para evitar el scroll horizontal.
+
+### ¿Qué debes recordar siempre?
+Al comenzar con CSS, es crucial reiniciar los estilos predeterminados del navegador, lo que incluye margin y padding, aplicando el selector universal `*`. Esto garantiza que no tengas comportamientos inesperados en las dimensiones de los elementos:
+* **Resetear Padding y Margin:** Usar `* { margin: 0; padding: 0; }`.
+* **Box-sizing Universal:** Agregar `box-sizing: border-box;` en el selector universal para un manejo más uniforme de las dimensiones.
