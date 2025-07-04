@@ -257,3 +257,21 @@ Entender la herencia permite evitar errores comunes y optimiza el código CSS. A
 * ***Consistencia en el diseño:*** Asegura que los estilos se apliquen uniformemente en toda la página.
 * ***Menor repetición de código:*** Reducir la necesidad de redefinir estilos para cada elemento.
 * ***Flexibilidad y control:*** Facilita el ajuste preciso del estilo donde sea necesario, rompiendo la herencia cuando ciertos elementos requieren un tratamiento diferente.
+
+### ¿Cómo funciona la cascada de CSS?
+* ***Importancia:*** El navegador carga estilos de distintas fuentes. Primero aplica los estilos predeterminados del usuario (navegador), luego los estilos escritos por los desarrolladores, y por último aplica aquellos con la etiqueta !important al final de una declaración. La recomendación es evitar el uso de ***!important*** pues puede complicar la gestión de estilos.
+
+* ***Especificidad:*** La especificidad es crucial y se mide de derecha a izquierda:
+
+* !important (evitarlo por malas prácticas).
+* Estilos inline.
+* Estilos aplicados a IDs.
+* Estilos aplicados a clases y pseudoclases.
+* Estilos aplicados a selectores de elementos HTML.
+### ¿Cómo afectan la especificidad y el orden de las reglas CSS?
+Cuando se genera un conflicto de estilos, CSS sigue reglas estrictas para resolverlo:
+
+* ***Importancia:*** Primero verifica si hay un estilo con !important.
+* ***Estilo Embebido:*** Luego considera los estilos inline.
+* ***Especificidad:*** Revisa las reglas según las características de especificidad (por ejemplo, qué tan detallado es el selector).
+* ***Orden de declaración:*** Las reglas declaradas más abajo en el archivo CSS tienen preferencia.
