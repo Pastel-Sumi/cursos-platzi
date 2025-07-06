@@ -308,3 +308,5 @@ Los combinadores en CSS son esenciales para definir estilos con especificidad si
 * ***Hermano general (~):*** Selecciona todos los hermanos posteriores a un elemento específico.
 * ***Hijo directo (>):*** Selecciona el hijo directo de un elemento determinado.
 * ***Descendiente (espacio):*** Selecciona a todos los descendientes de un elemento, independientemente de cuán profundamente anidados estén.
+
+[Más sobre combinadores](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators)

@@ -1,3 +1,9 @@
+/* Ejemplo hermano adyacente
 h2 + p {
     color: red;
+} */
+
+/* Ejemplo hermano general */
+h2 ~ p{
+    color:red;
 }
