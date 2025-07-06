@@ -4,6 +4,16 @@ h2 + p {
 } */
 
 /* Ejemplo hermano general */
-h2 ~ p{
+/* h2 ~ p{
     color:red;
+} */
+
+/* Ejemplo combinador hijo */
+/* div > p{
+    color: red;
+} */
+
+/* Ejemplo combinador descendiente */
+div p{
+    color: red;
 }
