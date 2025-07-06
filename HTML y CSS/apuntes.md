@@ -300,3 +300,11 @@ Cuando se genera un conflicto de estilos, CSS sigue reglas estrictas para resolv
 * No usar la etiqueta `<meta name=”viewpor” content=”width=device-width, initial-scale=1.0”>` para hacer tu proyecto responsive.
 * No poner el atributo autocomplete=”valor” en los campos de tu formulario para hacerle la vida más fácil al usuario.
 * No usar el atributo required en los campos obligatorios de tu formulario como una primera capa de seguridad.
+
+### ¿Qué son los combinadores en CSS?
+Los combinadores en CSS son esenciales para definir estilos con especificidad sin depender de los IDs. Nos permiten seleccionar y aplicar estilos a elementos basándonos en sus relaciones con otros elementos. Los cuatro combinadores más utilizados son:
+
+* ***Hermano adyacente (+):*** Selecciona el primer hermano inmediato que sigue a un elemento específico.
+* ***Hermano general (~):*** Selecciona todos los hermanos posteriores a un elemento específico.
+* ***Hijo directo (>):*** Selecciona el hijo directo de un elemento determinado.
+* ***Descendiente (espacio):*** Selecciona a todos los descendientes de un elemento, independientemente de cuán profundamente anidados estén.
