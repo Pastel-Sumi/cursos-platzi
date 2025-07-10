@@ -311,3 +311,23 @@ Los combinadores en CSS son esenciales para definir estilos con especificidad si
 
 [Más sobre combinadores](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators)
 ["Juego" de css](https://flukeout.github.io/)
+
+### ¿Cuáles son las medidas absolutas en CSS?
+Las medidas absolutas son aquellos parámetros fijos que no cambian sin importar el medio en que se visualice la página web. Aquí se incluyen las medidas en píxeles.
+
+* ***Píxeles (px):*** Definidos de forma constante, no cambian sin importar el dispositivo. Otorgan predictibilidad, pero pueden carecer de flexibilidad cuando se trata de dispositivos de diferentes tamaños.
+
+### ¿Qué son las medidas relativas en CSS?
+A diferencia de las absolutas, las medidas relativas ajustan su tamaño basado en el contexto del objeto padre o del tamaño de la pantalla, lo que las hace altamente flexibles y recomendadas para diseños adaptativos.
+
+* ***Porcentajes (%):*** Ajustan su tamaño en relación al contenedor padre.
+* ***Em:*** Basado en el tamaño de fuente del elemento padre.
+* ***Rem:*** Basado en el tamaño de fuente del elemento raíz del documento HTML.
+* ***Viewport width (vw) y viewport height (vh):*** Miden el ancho y alto del viewport (la ventana visible de la página).
+
+### ¿Qué es la medida relativa "em" en CSS?
+La medida "em" es una unidad de longitud en CSS que se utiliza con frecuencia para especificar tamaños de fuente, márgenes y rellenos. Su característica distintiva es que depende del tamaño de fuente del elemento padre inmediato, lo que la convierte en una medida relativa que puede generar algunas situaciones confusas para los desarrolladores si no se utiliza adecuadamente.
+
+* ***Uso cuidadoso:*** Asegúrate siempre de saber cuál es el elemento padre inmediato cuando usas "em", para poder prever el tamaño calculado.
+* ***Validación visual:*** Utiliza herramientas como el inspector de elementos del navegador para verificar rápidamente si los tamaños de fuente se comportan como esperas.
+* ***Estado inicial definido:*** Establece intencionadamente tamaños de base (font-size) en elementos raíz para mantener consistencia y previsibilidad.
