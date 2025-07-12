@@ -331,3 +331,39 @@ La medida "em" es una unidad de longitud en CSS que se utiliza con frecuencia pa
 * ***Uso cuidadoso:*** Asegúrate siempre de saber cuál es el elemento padre inmediato cuando usas "em", para poder prever el tamaño calculado.
 * ***Validación visual:*** Utiliza herramientas como el inspector de elementos del navegador para verificar rápidamente si los tamaños de fuente se comportan como esperas.
 * ***Estado inicial definido:*** Establece intencionadamente tamaños de base (font-size) en elementos raíz para mantener consistencia y previsibilidad.
+
+### ¿Qué es y por qué usar rem en lugar de em?
+El rem es una unidad relativa en CSS que siempre se refiere al tamaño de fuente del elemento raíz (html), que por defecto suele ser 16 píxeles en la mayoría de los navegadores. A diferencia de em, que depende del tamaño de fuente del elemento padre inmediato, el rem es consistente y predecible. Esto te permite tener un control absoluto sobre cómo aparecen los textos y demás elementos en tu página.
+
+### Ventajas del rem frente al em:
+
+* ***Consistencia:*** Rem siempre está basado en el tamaño de fuente de html.
+* ***Previsibilidad:*** Evita variaciones indeseadas causadas por tamaños de fuente anidados.
+* ***Simplicidad:*** Facilita la gestión de dimensiones sin cálculos complejos.
+  
+
+### ¿Cómo configurar rem como si fueran píxeles?
+Para aprovechar rem al máximo y evitar la necesidad de constantes conversiones entre píxeles y rem, se puede ajustar el `font-size` de la etiqueta `html` a un porcentaje específico:
+```css
+html {
+  font-size: 62.5%;
+}
+```
+¿Por qué 62.5%? Al establecer el `font-size` del `html` a 62.5%, un rem equivale a 10 píxeles en tus cálculos. Esto simplifica enormemente los cálculos:
+
+* 1.6 rem se traduce en 16 píxeles.
+* 2 rem se traduce en 20 píxeles.
+* 3 rem se traduce en 30 píxeles.
+
+### ¿Cuál es la estructura CSS básica recomendada?
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* Hace que 1 rem = 10 píxeles */
+}
+```

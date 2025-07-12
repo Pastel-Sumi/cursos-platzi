@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    padding: 9;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+main div{
+    font-size: 1.6rem;
+}
