@@ -367,3 +367,38 @@ html {
   font-size: 62.5%; /* Hace que 1 rem = 10 píxeles */
 }
 ```
+
+### ¿Qué es el viewport width (vw) y viewport height (vh)?
+`viewport width (vw)` y `viewport height (vh)` son unidades de medida relativas al tamaño de la ventana gráfica del navegador:
+
+* ***vw:*** Un vw es igual al 1% del ancho de la ventana gráfica.
+* ***vh:*** Un vh es igual al 1% de la altura de la ventana gráfica.
+Estas unidades son increíblemente útiles para hacer que los elementos ocupen un porcentaje específico del espacio visible del navegador, independientemente del tamaño de la ventana.
+
+### Explorando min-width, max-width, min-height y max-height
+Las propiedades `min-width`, `max-width`, `min-height`, y `max-height` permiten restringir el tamaño mínimo y máximo que puede alcanzar un elemento. Esto ayuda a controlar el crecimiento y contracción del contenido de manera ordenada dentro de las restricciones de diseño.
+
+### ¿Qué es position en CSS y por qué es importante?
+Position es una propiedad fundamental en CSS que nos permite controlar la ubicación de los elementos dentro de una página web. Comprender cómo funciona esta propiedad es crucial para manipular el diseño de nuestros proyectos de manera efectiva. Todos los elementos HTML vienen con `position: static` por defecto, lo que significa que se mantienen en el lugar asignado originalmente en el flujo del documento, y no se moverán aunque hagamos scroll en la página.
+
+Existen otras propiedades de `position`, como `absolute`, `relative`, `fixed` y `sticky`, que ofrecen comportamientos distintos y nos permiten crear diseños más dinámicos
+
+### ¿Qué diferencias hay entre static, absolute y relative?
+* ***static:*** Es la posición por defecto de todos los elementos. No permite modificar la posición del elemento en relación a su posición original en el documento.
+
+* ***absolute:*** Esta propiedad permite a un elemento posicionarse respecto al contenedor posicionado más cercano, lo que significa que puede salir del flujo normal del documento y aparecer sobre otros elementos. Por ejemplo:
+```css
+#2 {
+  position: absolute;
+}
+```
+En este caso, el div con id `2` se posiciona sobre los demás.
+
+* ***relative:*** Permite desplazar un elemento desde su posición original sin alterar el flujo del documento. Puedes especificar el desplazamiento usando propiedades como `top`, `bottom`, `left` y `right`. Ejemplo:
+```css
+#2 {
+  position: relative;
+  bottom: 15px;
+}
+```
+Esto moverá el div hacia arriba 15 píxeles, pero mantendrá su espacio dentro del cuadro contenedor.

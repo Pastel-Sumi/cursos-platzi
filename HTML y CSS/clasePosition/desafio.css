@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-box{
+    width: 100vw;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.gray-box{
+    position: relative;
+    background-color: lightgray;
+    border-radius: 6px;
+}
