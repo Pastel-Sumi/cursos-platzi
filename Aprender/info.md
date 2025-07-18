@@ -56,3 +56,22 @@ Agenda diaria:
   * Variables
 
 ***"Organiza tu vida y tu aprendizaje para que tu mente esté más enfocada".***
+
+
+## Pregunta/Respuesta
+* ¿Qué herramienta es una de las más importantes en el aprendizaje?	Tomar apuntes es una de las herramientas más importantes en el aprendizaje.
+* ¿Qué significa que las notas sean efectivas?	Las notas son efectivas cuando son organizadas, atractivas y útiles para el estudio, y no provocan emociones negativas como estrés o ansiedad.
+* ¿Cuáles son los cinco pasos recomendados para crear buenos apuntes?	
+  1. Crear un borrador de lectura, 
+  2. Dividir las notas en secciones, 
+  3. Darles un formato visualmente atractivo, 
+  4. Automatizar el proceso con plantillas y 
+  5. Crear una biblioteca de conocimiento.
+* ¿Cómo se puede crear un formato visualmente atractivo en las notas?	Usando colores, emojis, viñetas y organizando las secciones de manera visualmente agradable.
+* ¿Qué técnica es recomendada para tomar notas en línea mientras se sigue un curso?	Usar la pantalla dividida, donde se coloca el contenido del curso en una mitad y se toman notas en la otra mitad simultáneamente.
+* ¿Qué se debe hacer después de completar una lección, un curso o una sesión de estudio?	Se debe regresar al sistema de notas, revisar y completar las notas con información adicional.
+* ¿Qué es una biblioteca de conocimiento?	La biblioteca de conocimiento es una lista organizada de todo lo que se está aprendiendo. Permite acceder a las notas anteriores de manera ordenada a través de la tecnología.
+* ¿Qué es importante evitar al tomar apuntes?	Es importante evitar la transcripción total y en su lugar, simplificar y sintetizar la información al tomar apuntes.
+* ¿Cuál es la regla de oro para tomar apuntes?	La regla de oro es crear un sistema de notas con pasos repetibles, sintetizar la información y automatizar el proceso para hacerlo más eficiente.
+
+***"Tomar apuntes es la mejor forma de comprender y esintetizar lo que estudias. No transcribas. Simplifica y automatiza."***
