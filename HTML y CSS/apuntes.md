@@ -402,3 +402,33 @@ En este caso, el div con id `2` se posiciona sobre los demás.
 }
 ```
 Esto moverá el div hacia arriba 15 píxeles, pero mantendrá su espacio dentro del cuadro contenedor.
+
+### ¿Qué es el display en CSS?
+
+El concepto de display en CSS es fundamental para entender cómo se renderizan los elementos HTML en un navegador. El display determina cómo se muestra un elemento y cómo interactúa con otros en la página. Las propiedades más comunes de display son `block`, `inline`, e `inline-block`.
+
+### ¿Cómo funciona display block?
+
+El display block es uno de los valores de display más utilizados. Cuando un elemento tiene display block, este ocupa todo el ancho disponible, sin importar el contenido que tenga dentro.
+Características de display block:
+* Ocupa el 100% del espacio horizontal disponible.
+* Siempre comienza en una nueva línea.
+* Se pueden aplicar propiedades de `margin`, `padding`, `width`, y `height`.
+
+### ¿Qué es display inline?
+El display inline es el valor predeterminado para muchos elementos de texto, como `span` o `a`. A diferencia de los elementos que usan display block, los elementos inline solo ocupan el espacio que requiere su contenido.
+Características de display inline:
+* No comienzan en una nueva línea.
+* Ocupan solo el espacio necesario para el contenido.
+* No se pueden aplicar `width` ni `height`.
+* Solo se pueden aplicar `margin` y `padding` en los lados izquierdo y derecho, no arriba ni abajo.
+
+### ¿Cómo se utiliza display inline-block?
+El display inline-block es una combinación poderosa de los modelos block e inline. Permite que los elementos se alineen al mismo tiempo que se aplican las características de los elementos block.
+Características del display inline-block:
+* Se comporta como un elemento inline.
+* Permite aplicar `margin`, `padding`, `width`, y `height`.
+* Permite que otros elementos se posiciones en línea horizontalmente si hay espacio suficiente.
+
+
+``
