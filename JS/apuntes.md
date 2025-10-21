@@ -460,3 +460,179 @@ var jose = new Persona('José', 30, 1.70, 'colombiano');
 ```
 
 El uso de prototipos en JavaScript permite crear funciones que se comparten entre todas las instancias de una misma clase constructora, evitando así la duplicación y optimizando el uso de memoria. Además, facilita la extensión de objetos sin la necesidad de redefinir métodos para cada instancia nueva.
+
+
+## Herencia en JS
+```javascript
+class Animal {
+  constructor(nombre, tipo) {
+    this.nombre = nombre;
+    this.tipo = tipo;
+  }
+
+  emitirSonido() {
+    console.log("El animal emite un sonido");
+  }
+}
+
+//Herencia
+class Perro extends Animal {
+  constructor(nombre, tipo, raza) {
+    super(nombre, tipo);
+    this.raza = raza;
+  }
+
+  emitirSonido() {
+    console.log("El perro ladra");
+  }
+
+  correr() {
+    console.log(`${this.nombre} corre alegremente`);
+  }
+}
+```
+
+El uso de `this` y `super` es crucial cuando trabajamos con herencia en JavaScript. `this` se refiere al contexto de la clase actual. Por otro lado, `super` permite acceder y llamar a funciones del objeto padre de una clase. Esto es especialmente importante para inicializar propiedades del padre cuando se usa herencia:
+* **super(nombre, tipo);:** Llama al constructor de `Animal` permitiendo que `Perro` inicialice nombre y tipo.
+* **this.raza = raza;:** Completa la inicialización de Perro con una propiedad adicional.
+
+```javascript
+const perro1 = new Perro("Bobby", "perro", "Pug");
+perro1.emitirSonido(); // Imprime: El perro ladra
+perro1.correr(); // Imprime: Bobby corre alegremente
+
+console.log(Animal.prototype); // Muestra métodos de la clase Animal
+console.log(Perro.prototype);  // Incluye métodos de Perro y hereda los de Animal
+
+let prototipoActual = Object.getPrototypeOf(perro1);
+while (prototipoActual) {
+  console.log(prototipoActual);
+  prototipoActual = Object.getPrototypeOf(prototipoActual);
+}
+```
+
+## JavaScript Engine
+
+* **Memory Heap:**  espacio donde se almacenan variables, funciones y objetos creados en JavaScript de forma aleatoria. Actúa como un almacén desorganizado donde el navegador gestiona la memoria de manera eficiente, permitiendo que las aplicaciones JavaScript funcionen sin problemas.
+* **Call Stack:** pila de tareas donde se registran las funciones que deben ejecutarse. Cuando se llama a una función, esta se agrega al Call Stack, ejecutándose de manera secuencial.
+
+## Promesas en JS
+Transforman nuestro código de JS de un modelo síncrono a uno asíncrono. Funcionan al indicar al navegador que ciertas funciones deben ejecutarse de manera independiente. Una vez resueltas, las promesas se integran en el *call stack* para proporcionar un resultado. Estados de las promesas:
+1) **Pending (pendiente):** Este es el estado inicial. La promesa está creada pero aún no se ha resuelto ni ha fallado.
+2) **Fulfilled (resuelta):** Indica que la promesa se ha completado con éxito.
+3) **Rejected (rechazada):** Ocurre cuando la promesa no se puede cumplir, produciendo un error.
+
+Las promesas trabajan con dos tipos de funciones de callback:
+* **Resolve:** Se ejecuta cuando la promesa se resuelve exitosamente.
+* **Reject:** Se activa cuando la promesa no se puede completar, indicando un fallo.
+
+Metodos esenciales para gestionar los resultados de las promesas:
+* **Then:** Se ejecuta cuando la promesa se resuelve. A través de este método, podemos llevar a cabo acciones basadas en el resultado exitoso de una promesa.
+* **Catch:** Se utiliza para manejar errores. Si la promesa falla, el `catch` nos proporciona información necesaria para entender por qué no se resolvió.
+
+```javascript
+const promesa = new Promise((resolve, reject) => {
+  const operationSuccessFull = true;
+
+  setTimeout(() => {
+    if (operationSuccessFull) {
+      resolve('La operación fue exitosa');
+    } else {
+      reject('La operación falló');
+    }
+  }, 2000);
+});
+
+promesa
+  .then(successMessage => {
+    console.log(successMessage);
+  })
+  .catch(errorMessage => {
+    console.error(errorMessage);
+  });
+```
+
+Otro ejemplo:
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  let mockApiResponse = true; // Simulación de una respuesta de API
+
+  setTimeout(() => {
+    if (mockApiResponse) {
+      resolve('Operación completada con éxito');
+    } else {
+      reject('Error en la operación');
+    }
+  }, 3000);
+});
+
+// Uso de then y catch para manejar el resultado
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+```
+
+### Manejando promesas asíncronas en JS utilizando async/await
+Async/await es un paradigma que nos permite escribir código asíncrono de forma más legible y estructurada. En JavaScript, el uso de async/await nos permite manejar promesas de una manera más clara. Cuando declaras una función con async, esta automáticamente devuelve una promesa. Por otro lado, await hace que JavaScript espere a que una promesa se resuelva antes de continuar con el siguiente bloque de código.
+
+Ejemplo con `.then()` y `catch()`:
+```javascript
+function fetchData() {
+  fetch('https://rickandmortyapi.com/api/character')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+}
+
+fetchData();
+```
+
+Conversión a async/await:
+```javascript
+async function fetchData() {
+  try {
+    const response = await fetch('https://rickandmortyapi.com/api/character');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+fetchData();
+```
+
+`for await...of` es un bucle que permite iterar sobre objetos asíncronos, como promesas, de manera que podamos esperar a que cada una se resuelva antes de continuar con la siguiente.
+```javascript
+
+async function fetchNewDEata(){
+  const URLs = [
+    'url1', //Reemplazar con urls reales
+    'url2',
+    'url3'
+  ];
+
+  try {
+    for await (let URL of URLs){
+      let response = await fetch(URL);
+      let data = await response.json();
+      console.log(data);
+    }
+  } catch (error){
+    console.error('Error:', error);
+  }
+}
+
+fetchNewData();
+```
+
+## ¿Cuáles son los verbos HTTP y qué acciones permiten?
+Los verbos HTTP son esenciales para definir la acción que se desea realizar durante una interacción cliente-servidor. A continuación, exploramos los verbos más comunes:
+
+* **GET:** Se utiliza para obtener información que ya existe en el servidor sin realizar ningún cambio. Por ejemplo, al acceder a "platzi.com", se envía un GET para recibir y mostrar la página en el navegador.
+
+* **POST:** Este verbo es empleado para enviar datos nuevos al servidor. Cuando publicamos una actualización en redes sociales, como en Facebook, se usa un POST para almacenar esa nueva información en la base de datos del usuario.
+
+* **PATCH y PUT:** Ambos verbos se utilizan para actualizar información existente. Si se requiere corregir un error en un post o actualizar un perfil, PATCH y PUT envían las modificaciones al servidor para ser guardadas.
+
+* **DELETE:** Se emplea cuando deseamos eliminar un recurso del servidor. Puede ser la foto que subimos hace años y que ya no queremos conservar.
